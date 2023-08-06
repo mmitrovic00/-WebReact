@@ -36,3 +36,122 @@
     transform: rotate(360deg);
   }
 }
+
+.headerButton{
+  height:30px;
+  min-width:80px;
+  margin:10px;
+  border: 2px solid #b0b0b0;
+  border-radius: 5px;
+  background-color: #ededed;
+}
+
+.container {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #FFDAB9; /* This is your peach color */
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* src/LoginForm.css */
+.login-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form-container input[type="text"],
+.login-form-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.login-form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-form-container button:hover {
+  background-color: #0056b3;
+}
+
+.login-form-container .register-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-form-container .register-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.login-form-container .register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown menu style */
+.dropdown {
+  position: relative;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background: url('https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png')
+    no-repeat right center;
+  background-size: 24px 24px;
+}
+
+.dropdown select::-ms-expand {
+  display: none;
+}
+
+/* Style the dropdown arrow icon */
+.dropdown select::-ms-expand,
+.dropdown select::-webkit-scrollbar {
+  display: none;
+}
