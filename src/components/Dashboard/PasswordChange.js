@@ -48,7 +48,11 @@ function PasswordChange() {
                         </button>
                     </div>
                 </form>
-                <div>{errorMsg}</div>
+                {errorMsg && (
+                    <div className="error-container">
+                        <p className="error-message">{errorMsg}</p>
+                    </div>
+                )}
             </div>
         </div>
 

@@ -12,8 +12,8 @@ function Registration() {
 
   const submit = (e) => {
     e.preventDefault();
-    localStorage.setItem('userEmail', formData.email);
     const formData = new FormData(e.currentTarget)
+    localStorage.setItem('userEmail', formData.email);
     console.log(formData)
 
     let body = {
@@ -34,6 +34,7 @@ function Registration() {
         console.log(response)
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('userType', response.data.userType)
+        localStorage.setItem('userEmail',formData.get('email'))
         setAuth(true)
         navigate("/dashboard")
       })
@@ -53,12 +54,6 @@ function Registration() {
   const handleRoleChange = (e) => {
     setSelectedRole(e.target.value);
   };
-
-
-
-  
-
-
 
     return (
       <div className="container">
@@ -87,6 +82,11 @@ function Registration() {
               </button>
             </div>
           </form>
+          {errorMsg && (
+                    <div className="error-container">
+                        <p className="error-message">{errorMsg}</p>
+                    </div>
+                )}
           <div style={{ margin: '5px' }}>Already have an account? Go to <a href='/login'>Login</a></div>
 
         </div>

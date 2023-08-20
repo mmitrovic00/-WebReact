@@ -10,6 +10,14 @@ import { useRecoilState } from 'recoil';
 import { isAuthAtom } from './utils/auth';
 import { getTokenExpiration } from './utils/auth';
 import useAuth from './utils/useAuth'; // Import the useAuth hook
+import Verification from './components/Dashboard/Verification';
+import AddItem from './components/Dashboard/AddItem';
+import NewOrder from './components/Dashboard/NewOrder';
+import PreviousOrders from './components/Dashboard/PreviousOrders';
+import AllOrders from './components/Dashboard/AllOrders';
+import MyOrders from './components/Dashboard/MyOrders';
+import NewOrders from './components/Dashboard/NewOrder';
+import PendingOrders from './components/Dashboard/PendingOrders';
 
 // Custom ProtectedRoute wrapper function to handle protected routes
 
@@ -43,6 +51,14 @@ const AppRoutes = () => {
                     <Route index element={<h1>dashboard</h1>} />
                     <Route path="profile" element={<Profile />} />
                     <Route path="passwordChange" element={<PasswordChange/>}/>
+                    <Route path="verification" element={<Verification/>}/>
+                    <Route path="addItem" element={<AddItem/>}/>
+                    <Route path="newOrder" element={<NewOrder/>}/>
+                    <Route path="previousOrders" element={<PreviousOrders/>}/>
+                    <Route path="allOrders" element={<AllOrders/>}/>
+                    <Route path="myOrders" element={<MyOrders/>}/>
+                    <Route path="pendingOrders" element={<PendingOrders/>}/>
+
                 </Route>
             </Routes>
         </Router>

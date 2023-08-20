@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { getUser } from '../../api';
 import { updateUser } from '../../api';
 import { useNavigate } from "react-router-dom";
-import HeaderDash from './HeaderDash';
 
 function ProfileForm (){
-
-    const navigate = useNavigate();
+    const [errorMsg, setErrorMsg] = useState('')
     const [formData, setFormData] = useState({
         email: '',
         userName: '',
@@ -45,10 +43,10 @@ function ProfileForm (){
           updateUser(body)
             .then((response) => {
               console.log(response)
-              navigate("dashboard/profile")
             })
             .catch((error) => {
               console.log(error)
+              setErrorMsg(error.response.data)
             })
     };
 
@@ -78,6 +76,12 @@ function ProfileForm (){
                             Save
                         </button>
                     </div>
+                     {errorMsg && (
+                    <div className="error-container">
+                        <p className="error-message">{errorMsg}</p>
+                    </div>
+                )}
+
                 </form>
             </div>
         </div>

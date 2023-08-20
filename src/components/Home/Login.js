@@ -52,7 +52,11 @@ function Login() {
                         </button>
                     </div>
                 </form>
-                <div>{errorMsg}</div>
+               {errorMsg && (
+                    <div className="error-container">
+                        <p className="error-message">{errorMsg}</p>
+                    </div>
+                )}
 
                 <div style={{ margin: '5px' }}>Don't have an account? Go to <a href='/registration'>Registration</a></div>
             </div>
